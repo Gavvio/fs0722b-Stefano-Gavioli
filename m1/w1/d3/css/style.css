@@ -1,0 +1,43 @@
+.center-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2%;
+}
+.center-text{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.colore-rosso{
+    color:rgba(206, 13, 13, 0.836);
+}
+.colore-azzurro{
+    color:rgb(23, 231, 161);
+}
+#logo{
+width: 150;
+height: 180;
+}
+#scritta-head{
+    border-top: 3px solid yellow;
+    background-color: rgba(128, 128, 128, 0.396);
+    background-size: auto;
+}
+#immagine{
+width: 300;
+height: 400;
+}
+#testo-immagine{
+    color: rgba(73, 71, 69, 0.766);
+}
+#bordo-lato{
+    border-left: 3px solid yellow;
+}
+#bordo-sotto{
+    border-bottom: 2px solid rgb(183, 223, 237) ;
+}
+body{
+    font-family: 'Roboto Mono', monospace;
+}
+
