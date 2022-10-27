@@ -1,0 +1,44 @@
+body{
+    font-family: 'Poppins', sans-serif;
+   
+}
+iframe{
+    border-radius: 10%;
+}
+.center{
+    display: block;
+    margin: 1em auto 1em auto;
+}
+.center-text{
+    margin: 0.5em auto 0.5em auto;
+    width: 75%;
+    text-align: center;
+}
+.background-grey{
+    background-color: #e0e5e6;
+    margin: 1em auto 1em auto;
+}
+.text-white{
+    color: white;
+}
+#background-blue1{
+    background-color: #0088aa;
+}
+#background-white{
+    background-color: white;
+}
+#background-blue2{
+    background-color: #164a6d;
+}
+#background-1{
+    background-image: url(../materials/sfondo.png);
+    width: 200;
+    height: 200;
+    background-size: contain;
+    background-position: center;
+}
+h1{
+    font-size: large;
+    font-weight: 800;
+}
+
