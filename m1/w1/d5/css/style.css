@@ -166,7 +166,7 @@ main a{
     border: 1px solid rgba(0, 0, 0, 0.26);
 }
 aside img{
-    width:fit-content;
+    width:max-content;
     height: 200px;
     object-fit: contain;
 }
