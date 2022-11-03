@@ -41,20 +41,24 @@ if(a==8 || b==8 || a+b==8 || a-b==8){
   Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
 var totalShoppingCart=60;
+
 if(totalShoppingCart<=50){
   totalShoppingCart=totalShoppingCart+10;
 }
-console.log(totalShoppingCart);
+
+console.log('il prezzo è '+totalShoppingCart);
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
 totalShoppingCart=totalShoppingCart*80/100
+
 if(totalShoppingCart<=50){
   totalShoppingCart=totalShoppingCart+10;
 }
-console.log(totalShoppingCart);
+
+console.log('il prezzo è '+totalShoppingCart);
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -84,6 +88,9 @@ console.log(prima,seconda,terza);
 var num=5;
 if(typeof(num)=='number'){
 console.log('è un numero');
+}
+else{
+  console.log('non è un numero');
 }
 
 /* ESERCIZIO 9
@@ -167,5 +174,5 @@ console.log(numeri);
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
-numeri[9]=100;
+numeri[numeri.length-1]=100;
 console.log(numeri);

@@ -68,4 +68,13 @@ var name2='John';
 if(name1 != name2){
   console.log('diversi');
 }
+name2=name2.toLowerCase();
+if(name1 != name2){
+  console.log('diversi');
+}
+else{
+  console.log('uguali');
+}
+
+
 
