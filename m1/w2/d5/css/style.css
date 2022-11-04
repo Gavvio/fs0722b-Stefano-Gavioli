@@ -1,0 +1,70 @@
+body{
+    box-sizing: border-box;
+    background-image: url(../img/Pure-mathematics-formulæ-blackboard.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+body div {
+    margin: 120px auto 150px auto;
+    width: fit-content;
+    padding: 10px;
+    background:linear-gradient(to right,#4C516D,#5D76A9);
+}
+
+.calcolatrice{
+    width: auto;
+    margin: 0 auto;
+    display: inline-grid;
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px;
+    gap: 5px;
+}
+
+div.calcolatrice input#result{
+    border: 1px solid black;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    margin-bottom: 10px;
+    background:linear-gradient(to bottom,#15f4ee,#99FFFF);
+    border-radius: 4px;
+}
+input{
+    font-size: large;
+    font-family: 'Abril Fatface', cursive;
+}
+input.num{
+    border-radius: 4px;
+    background: linear-gradient(#FF3800,#FF7F50);
+}
+input.op{
+    border-radius: 4px;
+    background: linear-gradient(#00008B,#1034A6);
+    font-weight: bold;
+}
+input.equal{
+    border-radius: 4px;
+    background: linear-gradient(#00FF40,#66FF00);
+    font-weight: bold;
+}
+input.reset{
+    border-radius: 4px;
+    background: linear-gradient(#660000,#EF0107);
+}
+input.equal{
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+input:hover{
+    filter: brightness(80%);
+}
+input:active{
+    font-size: small;
+}
+input#result:hover{
+    filter: none;
+}
+input#result:active{
+    font-size: large;
+}

@@ -235,7 +235,7 @@ console.log(eyeColor)
 var a=0;
 var massa=0;
 while(a<starWarsCharacters.length){
-massa=massa+parseInt(starWarsCharacters[a].mass);
+massa+=parseInt(starWarsCharacters[a].mass);
 a++;
 }
 console.log(massa);
@@ -312,7 +312,7 @@ for(var i=0;i<starWarsCharacters.length;i++){
   }
 }
 console.log(starWarsCharacters);
-/*
+*/
 
 /* EXTRA ESERCIZIO 9
 

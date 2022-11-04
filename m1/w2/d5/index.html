@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatrice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+        <div>
+            
+            <div class="calcolatrice">
+                <!--display-->
+                <input type="text" id="result" placeholder="Nuova operazione">
+                <!--tastiera-->
+                <input type="button" value="7" class="num" data-simbolo="7" onclick="display(this)">
+                <input type="button" value="8" class="num" data-simbolo="8" onclick="display(this)">
+                <input type="button" value="9" class="num" data-simbolo="9" onclick="display(this)">
+                <input type="button" value="÷" class="op" data-simbolo="/" onclick="display(this)">
+                <input type="button" value="4" class="num" data-simbolo="4" onclick="display(this)">
+                <input type="button" value="5" class="num" data-simbolo="5" onclick="display(this)">
+                <input type="button" value="6" class="num" data-simbolo="6" onclick="display(this)">
+                <input type="button" value="x" class="op" data-simbolo="*" onclick="display(this)">
+                <input type="button" value="1" class="num" data-simbolo="1" onclick="display(this)">
+                <input type="button" value="2" class="num" data-simbolo="2" onclick="display(this)">
+                <input type="button" value="3" class="num" data-simbolo="3" onclick="display(this)">
+                <input type="button" value="-" class="op" data-simbolo="-" onclick="display(this)">
+                <input type="button" value="C" class="reset" onclick="reset()">
+                <input type="button" value="0" class="num" data-simbolo="0" onclick="display(this)">
+                <input type="button" value="." class="num" data-simbolo="." onclick="display(this)">
+                <input type="button" value="+" class="op" data-simbolo="+" onclick="display(this)">
+                <input type="button" value="=" class="equal" onclick="risultato()">
+    
+            </div>
+        </div>
+    
+
+    <script src="js/calcolatrice.js"></script>
+
+</body>
+</html>
