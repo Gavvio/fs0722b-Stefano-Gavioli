@@ -94,7 +94,7 @@ function es5(array)
     {
       som+=array[i];
     }
-    console.log(som);
+    return(som);
   }
   */
 
@@ -146,6 +146,7 @@ function es9(array)
   console.log(array);
 }
 */
+
 
 /* ESERCIZIO 10 (EXTRA)
   Scrivi una funzione per creare un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 10 (incluso), SENZA AMMETTERE DUPLICATI.

@@ -1,0 +1,61 @@
+#sfondo{
+    background-image: linear-gradient(to right,#B2FFFF,#00BFFF);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100vh;
+    height: 100vh;
+    width: 100vw;
+}
+#ingresso{
+    text-align: center;
+    padding-top: 3em;
+    padding-bottom: 2em;
+}
+#ingresso input{
+    background-color: whitesmoke;
+    border-radius: 6px;
+}
+#ingresso button{
+    background-color: #7B68EE;
+    border-radius: 6px;
+}
+.todo{
+    
+    padding:15px;
+    background-color: #ADFF2F;
+    margin-bottom: 15px;
+    border: 1px solid;
+    border-radius: 3px;
+    width: 50vw;
+    margin: auto;
+    text-align: center;
+}
+.span{
+    background-image: linear-gradient(#3F00FF,#6F00FF);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+}
+.completato{
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 1em;
+    
+}
+.completatoAzione{
+    background-color: #32CD32;
+    border-style: groove;
+    border-radius: 10px ;
+}
+.elimina{
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 1em;
+}
+.todo.completato button{
+    background-color: grey;
+}
