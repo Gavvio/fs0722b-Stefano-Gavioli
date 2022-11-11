@@ -71,7 +71,7 @@
 
       /*
       const addClassToTitle = function () {
-        //assegno il titolo a una variabile, selezioandola le aggiungo la nuova classe e le rimuovo la vecchia
+        //assegno il titolo a una variabile, selezionandola le aggiungo la nuova classe e le rimuovo la vecchia
         let titoloCambia = document.querySelector('.myClass');
         titoloCambia.classList.add('myHeading');
         titoloCambia.classList.remove('myClass');
@@ -87,7 +87,7 @@
       /*
       const changePcontent = function () {
         //seleziono tutti gli elementi indicati (i p discendenti da un div) e li modifico tutti con un ciclo for per scorrerli
-        let allP = document.querySelectorAll('div > p');
+        let allP = document.querySelectorAll('div p');
         for(let i=0;i<allP.length;i++)
         {
           allP[i].textContent='nuovo P';
@@ -142,6 +142,14 @@
       }
       addParagraph('Nuovo paragrafo');
       */
+
+      /*
+     const addParagraph = function(content){
+      const div=document.querySelectorAll('div')[0]
+      div.innerHTML+=`<p>${content}</p>`
+     }
+     addParagraph('Nuovo paragrafo')
+     */
 
       /* ESERCIZIO 7
        Scrivi una funzione per far scomparire la prima lista non-ordinata.
