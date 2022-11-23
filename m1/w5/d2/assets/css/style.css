@@ -183,12 +183,18 @@ h1 {
 }
 
 h1 span{
-  
+  position: absolute;
+  z-index: 0;
+ 
 }
 
-h1 span img{
+h1 img{
   position: absolute;
   z-index: -1;
+  top: 80%;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 
 p,

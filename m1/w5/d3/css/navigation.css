@@ -1,0 +1,38 @@
+body{
+    background-color: black;
+    display:flex;
+    justify-content: center;
+}
+nav{
+    background-color: #fbf7e3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5%/50%;
+    width: 80vw;
+    padding: 2vw;
+}
+
+
+nav button{
+    display: flex;
+    padding: 1vw 2vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffdf7f;
+    border-radius: 15%/50%;
+    font-size: 1.5vw;
+    border: none;
+    color: #612406;
+}
+#button-3{
+    padding: 2vw 2vw;
+    border-radius: 25%/50%;
+    font-weight: 700;
+    font-size: 1.7em;
+ }
+
+#button-3 img{
+    width: 2em;
+    padding-right: 2vw;
+}
