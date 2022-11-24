@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap%');
+body{
+display: flex;
+align-items: center;
+height: 100vh;
+background-color: black;
+}
+#contenitore-grande{
+    height: 70vh;
+    width: 100vw;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1em 1em;
+}
+#contenitore-grande div{
+    width: 20%;
+    margin: 1.5em 1em;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border: none;
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+    font-family: 'Indie Flower', cursive;
+}
+#contenitore-grande div:hover{
+    transform: scale(1.1);
+    position: relative;
+    z-index: 5;
+}
+#contenitore-grande div p{
+    line-height: 1em;
+}
+h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+.postItGiallo{
+    background-color: #f4f4c2;
+    transform: rotate(-5deg);
+}
+.postItVerde{
+    background-color: #c5f5c8;
+    transform: rotate(5deg);
+}
+.postItViola{
+    background-color: #b5b4d3;
+    transform: rotate(-8deg);
+}
+#post-1{
+   animation-name: discesa;
+   animation-duration: 0.3s;
+   animation-delay: 0s;
+   animation-iteration-count: 1;
+}
+#post-2{
+    animation-name: discesa;
+   animation-duration: 1.3s;
+   animation-delay: 0s;
+   animation-iteration-count: 1;
+}
+#post-3{
+    animation-name: discesa;
+   animation-duration: 1s;
+   animation-delay: 0s;
+   animation-iteration-count: 1;
+}
+#post-4{
+    animation-name: discesa;
+   animation-duration: 0.7s;
+   animation-delay: 0s;
+   animation-iteration-count: 1;
+}
+#post-5{
+    animation-name: discesa;
+   animation-duration: 0.2s;
+   animation-delay: 0s;
+   animation-iteration-count: 1;
+}
+#post-6{
+    animation-name: discesa;
+   animation-duration: 1.2s;
+   animation-delay: 0s;
+   animation-iteration-count: 1;
+}
+#post-7{
+    animation-name: discesa;
+   animation-duration: 0.6s;
+   animation-delay: 0s;
+   animation-iteration-count: 1;
+}
+#post-8{
+    animation-name: discesa;
+   animation-duration: 1.3s;
+   animation-delay: 0s;
+   animation-iteration-count: 1;
+}
+@keyframes discesa{
+    0% {opacity: 0%;transform:scale(1.1);}
+    50% {opacity: 0%;transform:scale(1.1);}
+    100% {opacity: 100%; transform:scale(1);}
+}
