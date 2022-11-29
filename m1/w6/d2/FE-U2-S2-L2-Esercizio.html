@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Abbiamo bisogno di un sito web per un'agenzia di viaggi!
+
+In questa pagina aggiungerai destinazioni di posti che sogni di visitare in futuro.
+
+Il progetto non richiede alcuna customizzazione di CSS, dovrai crearlo interamente usando le classi di bootstrap, sia per quello che riguarda il layout che lo stile.
+
+
+Testa frequentemente il tuo lavoro nelle 3 principali risoluzioni (mobile, tablet, desktop) usando i developer tools del browser nella sezione emulazione device, per una maggiore precisione.
+
+Inizia utilizzando i componenti esistenti di Bootstrap 5 per creare la tua pagina (modificali all'occorrenza utilizzando le utility classes di bootstrap: colori, spazi, margini, dimensioni etc...)
+Usa container > row > col-* in questo ordine per ottenere un layout responsive perfetto.
+
+Esercizi:
+
+1) Implementa una navbar con questi elementi di menu:
+Home
+Saldi
+Welcome Summer
+Last Minute
+Recensioni
+
+Collegherai ogni sezione della pagina agli elementi del menu corrispondenti.
+
+2) Aggiungi un logo alla navbar, un qualsiasi logo di agenzia di viaggi, anche inventata.
+
+3) Aggiungi una sezione introduttiva con il nome, il payoff dell'agenzia,
+una breve descrizione in corsivo e una call-to-action (bottone) "Prenota ora" di colore azzurro chiaro e testo bianco e grassetto
+
+Il background della sezione sarà grigio chiaro e con bordi arrotondati e del padding generoso all'interno
+
+4) Implementa la sezione "Saldi". Qui mostrerai 4 destinazioni.
+
+In questa sezione dovranno esserci:
+
+4 card per destinazioni per linea a schermo grande - desktop (quattro sulla stessa linea)
+3 card per destinazioni per linea a schermo medio  - tablet  (una dovrà scomparire)
+2 card per destinazioni per linea a schermo piccolo - mobile (due per linea)
+
+le card avranno un bordo di 2px azzurro chiaro, il bottone azzurro chiaro e testo default
+
+5) Implementa la sezione "Welcome Summer". Qui mostrerai 6 destinazioni al tuo utente. (nessun bordo, ma stesso stile dei bottoni precedenti)
+
+In questa sezione dovranno esserci:
+
+6 card per destinazioni per linea a schermo extra large
+3 card per destinazioni per linea a schermo grande (desktop)
+2 card per destinazioni per linea a schermo medio (tablet)
+2 card per destinazioni per linea a schermo piccolo (mobile)
+
+6) Implementa la sezione "Offerta del giorno". Qui avrai:
+
+66% dello spazio dedicato all'immagine del luogo di destinazione
+33% dedicato al nome, date, prezzo e un badge con "best offer" come testo
+
+l'immagine avrà i bordi arrotondati e un'ombra leggera
+per il contenuto: il nome dovrà essere più grande del resto,
+le date dovranno essere formattate con font "monospace",
+il prezzo dovrà essere definito come "lead"
+e il badge sarà scuro
+
+
+7) Rendi invisibile la sezione "Offerta del giorno" su schermi piccoli.
+
+8) Aggiungi nella sezione "Welcome Summer" un'ombra grande ad ogni card.
+
+9) Crea una sezione "Last Minute", in cui mostrerai 6 immagini delle destinazioni last minute come rettangoli ombreggiati dai bordi arrotondati, senza testo. Rendile responsive come preferisci!
+
+10) Crea una sezione "Recensioni", dove l'utente potrà trovare alcuni feedback da utenti fittizi.
+Piccola immagine tonda a sinistra con bordo 2px azzurro, nome utente e recensione a destra
+
+11) Crea un footer con le informazioni dell'agenzia e un bottone "Contattaci".
+
+
+
+EXTRAS
+
+12) Crea un bottone vicino ad ogni sezione per collassarla e riaprirla se premuto.
+
+13) Crea la possibilità di contare il numero di "viaggi" presenti sulla pagina e visualizzare il risultato in un alert.
+
+14) Crea un modale con un campo email e un messaggio.
+
+15) Quando l'utente cliccherà su "Contattaci", il modale dovrà essere visualizzato.
+
+16) Crea una funzione che aggiunga un badge con la scritta "HOT" su ognuna delle offerte "Welcome Summer" posizionato in alto a destra.
+
+17) Crea una funzione che rimuova tutte le "card" dalla pagina
+
+-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <!-----------------------------------------------INIZIO NAVBAR------------------------------------------------------------->
+        <nav class="navbar navbar-expand-lg bg-light px-5 mb-5">
+            <div class="container-fluid">
+                <img class="navbar-brand" src="img/OIP.jpeg" alt="#">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Saldi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Welcome Summer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Last Minute</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Recensioni</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Cerca posti da sogno"
+                            aria-label="Search">
+                        <button class="btn btn-outline-danger" type="submit">Cerca</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-----------------------------------------------FINE NAVBAR------------------------------------------------------------->
+    </header>
+
+    <main>
+        <!-----------------------------------------------INIZIO SECTION---------------------------------------------------------->
+        <div class="bg-light row justify-self-center p-5">
+            <div class="text-center text-secondary p-3 border-bottom border-body align-items-center"><p class="fs-1 d-inline align-middle">Eveline-R</p><span class="fs-2 align-middle"> - </span><p class="fs-6 d-inline align-middle">Feel the freedom</p></div>
+            <p class="fst-italic text-center text-secondary p-3 fs-3">Scopri le destinazioni piu'calde del momento</p>
+            <button type="button" class="btn btn-info text-white col-4 offset-4">Prenota ora</button>
+        </div>
+        <!-----------------------------------------------FINE SECTION------------------------------------------------------------>
+
+        <!-----------------------------------------------INIZIO SALDI---------------------------------------------------------->
+        <div class="mx-5">
+            <h4>Saldi</h4>
+        <div class="row gx-2">
+            <div class="col-lg col-md-4 col-6 col-sm-6">
+                <div class="card p-0 mx-2 mb-4 border border-3 border-info rounded">
+                    <img src="https://th.bing.com/th/id/R.005f7239729ad4b6be3afd68e0a623d8?rik=WM9LC8p1OchlOg&pid=ImgRaw&r=0"
+                        class="card-img-top" alt="immagine-vacanza">
+                    <div class="card-body">
+                        <h5 class="card-title">Titolo</h5>
+                        <p class="card-text fs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magni at
+                            eaque non, obcaecati numquam quibusdam laborum praesentium tempora cumque illo harum accusamus
+                            nulla quaerat autem similique esse velit hic.</p>
+                        <a href="#" class="btn btn-primary">Prenota</a>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-lg col-md-4 col-6 col-sm-6">
+                <div class="card p-0 mx-2 mb-4 border border-3 border-info rounded">
+                    <img src="https://th.bing.com/th/id/R.005f7239729ad4b6be3afd68e0a623d8?rik=WM9LC8p1OchlOg&pid=ImgRaw&r=0"
+                        class="card-img-top" alt="immagine-vacanza">
+                    <div class="card-body">
+                        <h5 class="card-title">Titolo</h5>
+                        <p class="card-text fs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magni at
+                            eaque non, obcaecati numquam quibusdam laborum praesentium tempora cumque illo harum accusamus
+                            nulla quaerat autem similique esse velit hic.</p>
+                        <a href="#" class="btn btn-primary">Prenota</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg col-md-4 col-6 col-sm-6">
+                <div class="card p-0 mx-2 mb-4 border border-3 border-info rounded">
+                    <img src="https://th.bing.com/th/id/R.005f7239729ad4b6be3afd68e0a623d8?rik=WM9LC8p1OchlOg&pid=ImgRaw&r=0"
+                        class="card-img-top" alt="immagine-vacanza">
+                    <div class="card-body">
+                        <h5 class="card-title">Titolo</h5>
+                        <p class="card-text fs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magni at
+                            eaque non, obcaecati numquam quibusdam laborum praesentium tempora cumque illo harum accusamus
+                            nulla quaerat autem similique esse velit hic.</p>
+                        <a href="#" class="btn btn-primary">Prenota</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg col-md-4 col-sm-6 col-6 d-md-none d-lg-block">
+                <div class="card p-0 mx-2 mb-4 border border-3 border-info rounded">
+                    <img src="https://th.bing.com/th/id/R.005f7239729ad4b6be3afd68e0a623d8?rik=WM9LC8p1OchlOg&pid=ImgRaw&r=0"
+                        class="card-img-top" alt="immagine-vacanza">
+                    <div class="card-body">
+                        <h5 class="card-title">Titolo</h5>
+                        <p class="card-text fs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magni at
+                            eaque non, obcaecati numquam quibusdam laborum praesentium tempora cumque illo harum accusamus
+                            nulla quaerat autem similique esse velit hic.</p>
+                        <a href="#" class="btn btn-primary">Prenota</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-----------------------------------------------FINE SALDI------------------------------------------------------------>
+        <!-----------------------------------------------INIZIO SUMMER--------------------------------------------------------->
+        <div class="mx-5">
+            <h4>Welcome Summer</h4>
+        <div class="row gx-2">
+            <div class="col-lg-4 col-6">
+                <div class="card p-0 mb-4 shadow-lg">
+                    <img src="https://th.bing.com/th/id/R.005f7239729ad4b6be3afd68e0a623d8?rik=WM9LC8p1OchlOg&pid=ImgRaw&r=0"
+                        class="card-img-top" alt="immagine-vacanza">
+                    <div class="card-body">
+                        <h5 class="card-title">Titolo</h5>
+                        <p class="card-text fs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magni at
+                            eaque non, obcaecati numquam quibusdam laborum praesentium tempora cumque illo harum accusamus
+                            nulla quaerat autem similique esse velit hic.</p>
+                        <a href="#" class="btn btn-primary">Prenota</a>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-lg-4 col-6">
+                <div class="card p-0 mb-4 shadow-lg">
+                    <img src="https://th.bing.com/th/id/R.005f7239729ad4b6be3afd68e0a623d8?rik=WM9LC8p1OchlOg&pid=ImgRaw&r=0"
+                        class="card-img-top" alt="immagine-vacanza">
+                    <div class="card-body">
+                        <h5 class="card-title">Titolo</h5>
+                        <p class="card-text fs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magni at
+                            eaque non, obcaecati numquam quibusdam laborum praesentium tempora cumque illo harum accusamus
+                            nulla quaerat autem similique esse velit hic.</p>
+                        <a href="#" class="btn btn-primary">Prenota</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-6">
+                <div class="card p-0 mb-4 shadow-lg">
+                    <img src="https://th.bing.com/th/id/R.005f7239729ad4b6be3afd68e0a623d8?rik=WM9LC8p1OchlOg&pid=ImgRaw&r=0"
+                        class="card-img-top" alt="immagine-vacanza">
+                    <div class="card-body">
+                        <h5 class="card-title">Titolo</h5>
+                        <p class="card-text fs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magni at
+                            eaque non, obcaecati numquam quibusdam laborum praesentium tempora cumque illo harum accusamus
+                            nulla quaerat autem similique esse velit hic.</p>
+                        <a href="#" class="btn btn-primary">Prenota</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-6">
+                <div class="card p-0 mb-4 shadow-lg">
+                    <img src="https://th.bing.com/th/id/R.005f7239729ad4b6be3afd68e0a623d8?rik=WM9LC8p1OchlOg&pid=ImgRaw&r=0"
+                        class="card-img-top" alt="immagine-vacanza">
+                    <div class="card-body">
+                        <h5 class="card-title">Titolo</h5>
+                        <p class="card-text fs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magni at
+                            eaque non, obcaecati numquam quibusdam laborum praesentium tempora cumque illo harum accusamus
+                            nulla quaerat autem similique esse velit hic.</p>
+                        <a href="#" class="btn btn-primary">Prenota</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-4 col-6">
+                <div class="card p-0 mb-4 shadow-lg">
+                    <img src="https://th.bing.com/th/id/R.005f7239729ad4b6be3afd68e0a623d8?rik=WM9LC8p1OchlOg&pid=ImgRaw&r=0"
+                        class="card-img-top" alt="immagine-vacanza">
+                    <div class="card-body">
+                        <h5 class="card-title">Titolo</h5>
+                        <p class="card-text fs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magni at
+                            eaque non, obcaecati numquam quibusdam laborum praesentium tempora cumque illo harum accusamus
+                            nulla quaerat autem similique esse velit hic.</p>
+                        <a href="#" class="btn btn-primary">Prenota</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-4 col-6">
+                <div class="card p-0 mb-4 shadow-lg">
+                    <img src="https://th.bing.com/th/id/R.005f7239729ad4b6be3afd68e0a623d8?rik=WM9LC8p1OchlOg&pid=ImgRaw&r=0"
+                        class="card-img-top" alt="immagine-vacanza">
+                    <div class="card-body">
+                        <h5 class="card-title">Titolo</h5>
+                        <p class="card-text fs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magni at
+                            eaque non, obcaecati numquam quibusdam laborum praesentium tempora cumque illo harum accusamus
+                            nulla quaerat autem similique esse velit hic.</p>
+                        <a href="#" class="btn btn-primary">Prenota</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-----------------------------------------------FINE SUMMER----------------------------------------------------------->
+        <!-----------------------------------------------INIZIO FOOTER--------------------------------------------------------->
+        <footer class="bg-dark mt-5 pt-2">
+            <div class="text-center mt-3">
+                <button class="mx-auto btn-outline-light text-secondary bg-dark">Contattaci</button>
+            </div>
+           
+            <p class="text-center text-white">&copy 2021 Kalina Travel LTD. All Rights Reserved.</p>
+        </footer>
+        <!-----------------------------------------------FINE FOOTER--------------------------------------------------------->
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
