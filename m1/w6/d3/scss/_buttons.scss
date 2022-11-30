@@ -1,0 +1,39 @@
+#bottoni {
+    margin-top: 0;
+}
+
+#bottoni button:nth-child(1) {
+    a {
+        color: $w;
+        text-decoration: none;
+        font-family: 'Lobster', cursive;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        transition: 1s;
+    }
+
+    background-color: $color_button1;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#bottoni button:nth-child(2) {
+    a {
+        color: $w;
+        text-decoration: none;
+        font-family: 'Lobster', cursive;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        transition: 1s;
+    }
+
+    background-color: $color_button2;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
