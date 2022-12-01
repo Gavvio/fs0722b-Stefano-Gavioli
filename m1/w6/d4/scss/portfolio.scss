@@ -1,0 +1,16 @@
+@import 'header';
+@import 'footer';
+@import 'main';
+* {
+    box-sizing: border-box;
+}
+
+ul{
+    li{
+        margin-top:10px;
+        list-style: none;
+    }
+    .p2,.p4{
+        font-style: italic;
+    }
+}

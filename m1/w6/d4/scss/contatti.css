@@ -1,0 +1,90 @@
+header {
+  background-color: #170a48;
+  border-radius: 5px;
+  outline: 3px solid #e7bfac;
+  box-shadow: 0 0 20px #e7bfac;
+}
+header nav ul {
+  margin-top: 5px;
+  padding: 15px 20px;
+}
+header nav ul li {
+  display: inline-block;
+  margin-right: 2vw;
+  list-style: none;
+}
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #6285f9;
+  border-radius: 5px;
+  height: 80px;
+}
+
+main {
+  margin: 2vh 15vw;
+  display: flex;
+  justify-content: space-between;
+}
+main div {
+  width: 40vw;
+}
+main aside {
+  width: 20vw;
+}
+main aside ul {
+  justify-content: center;
+  list-style: none;
+}
+main aside ul li {
+  padding-left: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: dashed;
+  border-color: rgba(0, 0, 0, 0.233);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main div span {
+  position: relative;
+  top: 9px;
+  left: 8px;
+  background-color: white;
+  font-weight: 500;
+}
+main div form {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(0, 0, 0, 0.351);
+}
+main div form input:nth-child(1) {
+  margin-top: 15px;
+  margin-left: 10px;
+  width: 15vw;
+  margin-bottom: 3px;
+}
+main div form input:nth-child(1):focus {
+  outline: solid 2px #6285f9;
+}
+main div form input:nth-child(2) {
+  margin-left: 10px;
+  width: 15vw;
+  margin-bottom: 3px;
+}
+main div form input:nth-child(2):focus {
+  outline: solid 2px #6285f9;
+}
+main div form textarea {
+  margin-left: 10px;
+  margin-bottom: 15px;
+  width: 20vw;
+}
+main div form textarea:focus {
+  outline: solid 2px #6285f9;
+}/*# sourceMappingURL=contatti.css.map */

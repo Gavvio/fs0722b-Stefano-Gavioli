@@ -1,0 +1,19 @@
+@import 'header';
+@import 'footer';
+@import 'main';
+*{
+    box-sizing: border-box;
+}
+i{
+    color: #f27934;
+}
+button{
+    background-color: #ffa500;
+    padding: 5px;
+    color: white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-top:2px solid rgba(0, 0, 0, 0.322);
+    border-left:2px solid rgba(0, 0, 0, 0.322);
+}
+

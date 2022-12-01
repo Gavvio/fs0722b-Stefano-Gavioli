@@ -1,0 +1,50 @@
+@import 'header';
+@import 'footer';
+@import 'main';
+* {
+    box-sizing: border-box;
+}
+
+main{
+    div{
+        span{
+            position: relative;
+            top: 9px;
+            left: 8px;
+            background-color: white;
+            font-weight: 500;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            border: 2px solid rgba(0, 0, 0, 0.351);
+            input:nth-child(1){
+                margin-top: 15px;
+                margin-left: 10px;
+                width: 15vw;
+                margin-bottom: 3px;
+            }
+            input:nth-child(1):focus{
+                outline: solid 2px #6285f9;
+            }
+            input:nth-child(2){
+                margin-left: 10px;
+                width: 15vw;
+                margin-bottom: 3px;
+            }
+            input:nth-child(2):focus{
+                outline: solid 2px #6285f9;
+            }
+            textarea{
+                margin-left: 10px;
+                margin-bottom: 15px;
+                width: 20vw;
+            }
+            textarea:focus{
+                outline: solid 2px #6285f9;
+            }
+
+
+        }
+    }
+}
