@@ -1,0 +1,55 @@
+header {
+    background-color: #772cf3;
+
+    nav {
+        .navbar-nav {
+            margin-left: auto;
+
+            & li:nth-child(2) {
+                a {
+                    color: #fd2750;
+                }
+
+            }
+
+            & li:nth-child(3) {
+                a {
+                    color: #fd2750;
+                }
+
+            }
+
+            & li:nth-child(4) {
+                svg {
+                    fill: #fd2750;
+                }
+            }
+
+            & li:nth-child(5) {
+                svg {
+                    fill: #fd2750;
+                }
+            }
+
+            & li:nth-child(6) {
+                svg {
+                    fill: #fd2750;
+                }
+            }
+
+            & li:nth-child(7) {
+                svg {
+                    fill: #fd2750;
+                }
+            }
+
+        }
+    }
+
+    .navbar-brand {
+        color: white;
+    }
+
+
+
+}

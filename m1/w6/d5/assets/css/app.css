@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+header {
+  background-color: #772cf3;
+}
+header nav .navbar-nav {
+  margin-left: auto;
+}
+header nav .navbar-nav li:nth-child(2) a {
+  color: #fd2750;
+}
+header nav .navbar-nav li:nth-child(3) a {
+  color: #fd2750;
+}
+header nav .navbar-nav li:nth-child(4) svg {
+  fill: #fd2750;
+}
+header nav .navbar-nav li:nth-child(5) svg {
+  fill: #fd2750;
+}
+header nav .navbar-nav li:nth-child(6) svg {
+  fill: #fd2750;
+}
+header nav .navbar-nav li:nth-child(7) svg {
+  fill: #fd2750;
+}
+header .navbar-brand {
+  color: white;
+}
+
+#primoPiano {
+  padding-left: 0;
+}
+#primoPiano #div_immagine {
+  background-image: url(../img/pexels-aleksandar-pasaric-325185.jpg);
+  background-position: left;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 500px;
+}
+#primoPiano #div_immagine h1 {
+  text-align: center;
+  padding-top: 5vh;
+  margin-bottom: 5vh;
+}
+#primoPiano #div_immagine button {
+  background-color: #660ff0;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+#primoPiano #div_immagine div {
+  margin: 0 10vw;
+}
+#primoPiano #lorems {
+  background-color: #f5f5f5;
+  padding: 5vh 5vw;
+}
+#primoPiano #lorems .card {
+  background-color: #f5f5f5;
+  border: none;
+}
+#primoPiano #lorems .card svg {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50px;
+  height: 50px;
+}
+
+#partnership h2 {
+  text-align: center;
+  font-weight: 400;
+}
+
+#carosello h2 {
+  text-align: center;
+}
+
+footer {
+  color: white;
+  background-color: #7a31f3;
+  font-size: 0.8em;
+}
+footer #div_footer_contenitore {
+  padding-top: 15px;
+}
+footer #div_footer1 {
+  width: 30vw;
+  margin-left: 5vw;
+}
+@media screen and (max-width: 768px) {
+  footer #div_footer1 {
+    width: 100vw;
+    text-align: center;
+    margin-left: 0;
+  }
+}
+footer #div_footer2 {
+  width: 70vw;
+}
+footer p {
+  text-align: center;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,12 @@
+@import "variabili";
+
+
+
+@function colors($color) {
+  @if (lightness($color) > 40) {
+    @return black;
+  }
+  @else {
+    @return white;
+  }
+} /*chiaramente non funziona*/

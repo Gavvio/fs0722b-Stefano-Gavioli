@@ -1,0 +1,41 @@
+#primoPiano{
+    padding-left: 0;
+    #div_immagine{
+        background-image: url(../img/pexels-aleksandar-pasaric-325185.jpg);
+        background-position: left;
+        background-size: 120%;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 500px;
+        h1{
+         text-align: center;
+         padding-top: $altezza;
+         margin-bottom: $altezza;
+        }
+        button{
+            background-color: #660ff0;
+            color: white;
+            border-radius: 5px;
+            border: none;
+        }
+        div{
+            margin:0 10vw;
+        }
+    }
+    #lorems{
+        background-color: #f5f5f5;
+        padding:$altezza 5vw;
+        .card{
+            background-color: #f5f5f5;
+            border: none;
+            svg{
+                margin-left: auto;
+                margin-right: auto;
+                width: 50px;
+                height: 50px;
+            }
+        }
+        
+    }
+
+}

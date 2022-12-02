@@ -1,0 +1,23 @@
+footer{
+    color: white;
+    background-color: #7a31f3;
+    font-size: 0.8em;
+    #div_footer_contenitore{
+        padding-top: 15px;
+    }
+    #div_footer1{
+        width: 30vw;
+        margin-left: 5vw;
+        @media screen and (max-width: 768px){
+            width: 100vw;
+            text-align: center;
+            margin-left: 0;
+        }
+    }
+    #div_footer2{
+        width: 70vw;
+    }
+    p{
+        text-align: center;
+    }
+}
