@@ -1,4 +1,4 @@
-/* nell'oggetto raccolgo i date relativi al nome completo e a anno,mese,giorno correnti e di nascita */
+/* nell'oggetto raccolgo i dati relativi al nome completo e a anno,mese,giorno correnti e di nascita */
 function Persona() {
     this.nome = '';
     this.eta = '';
@@ -8,7 +8,7 @@ function Persona() {
     this.mese_attuale = '';
     this.giorno_nascita = '';
     this.giorno_attuale = '';
-    /* procedo a calcolare la differenza in anni e poi controllare mese e giorno per eventualmente togliere un anno dal risultato nel caso in cui non siano ancora stati compiuti */
+    /* procedo con un metodo a calcolare la differenza in anni e poi controllare mese e giorno per eventualmente togliere un anno dal risultato nel caso in cui non siano ancora stati compiuti */
     this.calcolaEta = function () {
 
         this.eta = this.anno_attuale - this.anno_nascita;
@@ -19,6 +19,14 @@ function Persona() {
             this.eta--
         }
     };
+    /* un metodo per aggiungere la nuova riga di tabella e ripulire i campi input */
+    this.stampa = function () {
+        tabella.innerHTML += '<tr><td>' + this.nome + '</td> <td>' + this.eta + '</td></tr>'
+        nome.value = '';
+        cognome.value = '';
+        data.value = '';
+        testo.innerHTML = '';
+    }
 }
 
 /*variabili*/
@@ -44,11 +52,7 @@ bottone.addEventListener('click', () => {
         persona.giorno_nascita = data.value.substring(8, 10);
         persona.giorno_attuale = current_data.getDate();
         persona.calcolaEta();
-        tabella.innerHTML += '<tr> <td>' + persona.nome + '</td> <td>' + persona.eta + '</td></tr>'
-        nome.value = '';
-        cognome.value = '';
-        data.value = '';
-        testo.innerHTML = '';
+        persona.stampa();
     }
     else {
         testo.innerHTML = '<h3>INSERISCI TUTTI I DATI!</h3>'
