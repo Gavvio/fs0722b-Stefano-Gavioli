@@ -35,26 +35,26 @@ class Student {
         this.class = d;
     }
     mostra_primi(items, pageSize) {
-        tabella.innerHTML='';
+        tabella.innerHTML = '';
         for (let i = 0; i < pageSize; i++) {
             tabella.innerHTML += '<tr><td>' + items[i].id + '</td><td>' + items[i].name + '</td><td>' + items[i].surname + '</td><td>' + items[i].class + '</td></tr>';
         }
     }
     mostra_ultimi(items, pageSize) {
-        tabella.innerHTML='';
+        tabella.innerHTML = '';
         for (let i = items.length - pageSize; i < items.length; i++) {
             tabella.innerHTML += '<tr><td>' + items[i].id + '</td><td>' + items[i].name + '</td><td>' + items[i].surname + '</td><td>' + items[i].class + '</td></tr>';
         }
     }
-    precedente(items, pageSize,mom) {
-        tabella.innerHTML='';
-        for (let i = mom-pageSize; i < mom; i++) {
+    precedente(items, pageSize, mom) {
+        tabella.innerHTML = '';
+        for (let i = mom - pageSize; i < mom; i++) {
             tabella.innerHTML += '<tr><td>' + items[i].id + '</td><td>' + items[i].name + '</td><td>' + items[i].surname + '</td><td>' + items[i].class + '</td></tr>';
         }
     }
-    successivo(items, pageSize,mom) {
-        tabella.innerHTML='';
-        for (let i = mom; i < mom+pageSize; i++) {
+    successivo(items, pageSize, mom) {
+        tabella.innerHTML = '';
+        for (let i = mom; i < mom + pageSize; i++) {
             tabella.innerHTML += '<tr><td>' + items[i].id + '</td><td>' + items[i].name + '</td><td>' + items[i].surname + '</td><td>' + items[i].class + '</td></tr>';
         }
     }
@@ -87,39 +87,37 @@ var studente8 = new Student(array[7].id, array[7].nome, array[7].cognome, array[
 var arrayStudenti = [studente1, studente2, studente3, studente4, studente5, studente6, studente7, studente8];
 
 /* COMANDO DA ESEGUIRE AD APERTURA PAGINA*/
-studente1.mostra_primi(arrayStudenti,2);
+studente1.mostra_primi(arrayStudenti, 2);
 
 /* COMANDI TRAMITE I LINK */
-prima_pagina.addEventListener('click',()=>{
+prima_pagina.addEventListener('click', () => {
     studente1.mostra_primi(arrayStudenti, 2);
 });
-ultima_pagina.addEventListener('click',()=>{
+ultima_pagina.addEventListener('click', () => {
     studente1.mostra_ultimi(arrayStudenti, 2);
 });
-precedente.addEventListener('click',()=>{
-   if(document.querySelector('#tabella td').textContent==1)
-   {
-    studente1.mostra_primi(arrayStudenti, 2);
-   }
-   else if(document.querySelector('#tabella td').textContent==3){
-    studente1.mostra_primi(arrayStudenti, 2);
-   }
-   else if(document.querySelector('#tabella td').textContent==5){
-    studente1.precedente(arrayStudenti,2,4);
-   }
-   else{
-    studente1.precedente(arrayStudenti,2,6);
-   }
+precedente.addEventListener('click', () => {
+    if (document.querySelector('#tabella td').textContent == 1) {
+        studente1.mostra_primi(arrayStudenti, 2);
+    }
+    else if (document.querySelector('#tabella td').textContent == 3) {
+        studente1.mostra_primi(arrayStudenti, 2);
+    }
+    else if (document.querySelector('#tabella td').textContent == 5) {
+        studente1.precedente(arrayStudenti, 2, 4);
+    }
+    else {
+        studente1.precedente(arrayStudenti, 2, 6);
+    }
 });
-successivo.addEventListener('click',()=>{
-    if(document.querySelector('#tabella td').textContent==1)
-    {
-     studente1.successivo(arrayStudenti, 2,2);
+successivo.addEventListener('click', () => {
+    if (document.querySelector('#tabella td').textContent == 1) {
+        studente1.successivo(arrayStudenti, 2, 2);
     }
-    else if(document.querySelector('#tabella td').textContent==3){
-     studente1.successivo(arrayStudenti, 2,4);
+    else if (document.querySelector('#tabella td').textContent == 3) {
+        studente1.successivo(arrayStudenti, 2, 4);
     }
-    else if(document.querySelector('#tabella td').textContent==5){
-     studente1.mostra_ultimi(arrayStudenti,2);
+    else if (document.querySelector('#tabella td').textContent == 5) {
+        studente1.mostra_ultimi(arrayStudenti, 2);
     }
 });
