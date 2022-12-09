@@ -75,6 +75,8 @@ var array = [
     { id: 6, nome: 'Sergio', cognome: 'Verdi', classe: 'A' },
     { id: 7, nome: 'Gianno', cognome: 'Bianchi', classe: 'A' },
     { id: 8, nome: 'Davide', cognome: 'Neri', classe: 'A' },
+    { id: 9, nome: 'Stefano', cognome: 'Gavioli', classe: 'B' },
+    { id: 10, nome: 'Francesco', cognome: 'Pastore', classe: 'B' }
 ];
 var studente1 = new Student(array[0].id, array[0].nome, array[0].cognome, array[0].classe);
 var studente2 = new Student(array[1].id, array[1].nome, array[1].cognome, array[1].classe);
@@ -84,7 +86,9 @@ var studente5 = new Student(array[4].id, array[4].nome, array[4].cognome, array[
 var studente6 = new Student(array[5].id, array[5].nome, array[5].cognome, array[5].classe);
 var studente7 = new Student(array[6].id, array[6].nome, array[6].cognome, array[6].classe);
 var studente8 = new Student(array[7].id, array[7].nome, array[7].cognome, array[7].classe);
-var arrayStudenti = [studente1, studente2, studente3, studente4, studente5, studente6, studente7, studente8];
+var studente9 = new Student(array[8].id, array[8].nome, array[8].cognome, array[8].classe);
+var studente10 = new Student(array[9].id, array[9].nome, array[9].cognome, array[9].classe);
+var arrayStudenti = [studente1, studente2, studente3, studente4, studente5, studente6, studente7, studente8, studente9, studente10];
 
 /* COMANDO DA ESEGUIRE AD APERTURA PAGINA*/
 studente1.mostra_primi(arrayStudenti, 2);
@@ -93,9 +97,11 @@ studente1.mostra_primi(arrayStudenti, 2);
 prima_pagina.addEventListener('click', () => {
     studente1.mostra_primi(arrayStudenti, 2);
 });
+
 ultima_pagina.addEventListener('click', () => {
     studente1.mostra_ultimi(arrayStudenti, 2);
 });
+
 precedente.addEventListener('click', () => {
     if (document.querySelector('#tabella td').textContent == 1) {
         studente1.mostra_primi(arrayStudenti, 2);
@@ -106,8 +112,11 @@ precedente.addEventListener('click', () => {
     else if (document.querySelector('#tabella td').textContent == 5) {
         studente1.precedente(arrayStudenti, 2, 4);
     }
-    else {
+    else if (document.querySelector('#tabella td').textContent == 7) {
         studente1.precedente(arrayStudenti, 2, 6);
+    }
+    else {
+        studente1.precedente(arrayStudenti, 2, 8);
     }
 });
 successivo.addEventListener('click', () => {
@@ -118,6 +127,10 @@ successivo.addEventListener('click', () => {
         studente1.successivo(arrayStudenti, 2, 4);
     }
     else if (document.querySelector('#tabella td').textContent == 5) {
+        studente1.successivo(arrayStudenti, 2, 6);
+    }
+    else if (document.querySelector('#tabella td').textContent == 7) {
         studente1.mostra_ultimi(arrayStudenti, 2);
     }
 });
+
