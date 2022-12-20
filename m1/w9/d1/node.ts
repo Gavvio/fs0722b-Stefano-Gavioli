@@ -19,5 +19,5 @@ function giocoRandom(a:number, b:number):void{
             console.log("nessuno ha azzeccato ma il giocatore 1 è andato più vicino");
         }
     }
-};
+}
 giocoRandom(a,b);
