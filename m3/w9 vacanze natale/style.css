@@ -1,0 +1,140 @@
+#base,
+#altezza,
+#raggio,
+#apotema,
+#button,
+#cerchio,
+#triangolo,
+#quadrato,
+#rettangolo,
+#pentagono,
+#esagono,
+#quadrato-figura-3d {
+  display: none;
+}
+
+#cerchio-figura-2d {
+  display: none;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(0, 128, 0, 0.704);
+  border-radius: 50%;
+}
+
+#triangolo-figura-2d {
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 300px solid red;
+}
+
+#quadrato-figura-2d {
+  display: none;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 0, 0, 0.722);
+}
+
+#rettangolo-figura-2d {
+  display: none;
+  width: 500px;
+  height: 250px;
+  background-color: rgba(255, 166, 0, 0.792);
+}
+
+#pentagono-figura-2d {
+  position: relative;
+  width: 307.5px;
+  height: 300px;
+  background-image: linear-gradient(to top, rgba(0, 102, 255, 0.382), rgb(0, 102, 255));
+  -webkit-clip-path: polygon(50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+          clip-path: polygon(50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+}
+
+#esagono-figura-2d {
+  margin-top: 90px;
+  width: 312px;
+  height: 180px;
+  background-color: rgba(255, 0, 212, 0.619);
+  border-color: rgba(255, 0, 212, 0.619);
+  position: relative;
+  display: inline-block;
+}
+
+#esagono-figura-2d:before {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-bottom: 90px solid;
+  border-color: inherit;
+  border-left: 156px solid transparent;
+  border-right: 156px solid transparent;
+  position: absolute;
+  top: -90px;
+}
+
+#esagono-figura-2d:after {
+  content: "";
+  width: 0;
+  position: absolute;
+  bottom: -90px;
+  border-top: 90px solid;
+  border-color: inherit;
+  border-left: 156px solid transparent;
+  border-right: 156px solid transparent;
+}
+
+.scene {
+  margin: 50px 50px 50px 50px;
+  width: 200px;
+  height: 200px;
+  perspective: 600px;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.cube__face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.cube__face--front {
+  background-color: rgba(255, 0, 0, 0.429);
+  transform: rotateY(0deg) translateZ(100px);
+  /* background-image: url(immagini/heart-disease-icon-200x200px.jpg); */
+}
+
+.cube__face--right {
+  background-color: rgba(0, 0, 255, 0.505);
+  transform: rotateY(90deg) translateZ(100px);
+  /* background-image: url(immagini/4924317280_0f57c62030_m.jpg); */
+}
+
+.cube__face--back {
+  background-color: rgba(128, 128, 128, 0.511);
+  transform: rotateY(180deg) translateZ(100px);
+}
+
+.cube__face--left {
+  background-color: rgba(255, 166, 0, 0.473);
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.cube__face--top {
+  background-color: rgba(128, 0, 128, 0.473);
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.cube__face--bottom {
+  background-color: rgba(0, 128, 0, 0.478);
+  transform: rotateX(-90deg) translateZ(100px);
+}/*# sourceMappingURL=style.css.map */
