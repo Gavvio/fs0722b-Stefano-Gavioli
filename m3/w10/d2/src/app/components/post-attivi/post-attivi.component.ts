@@ -7,13 +7,17 @@ import { Post } from 'src/app/interface/post.interface';
   templateUrl: './post-attivi.component.html',
   styleUrls: ['./post-attivi.component.scss']
 })
+
 export class PostAttiviComponent implements OnInit {
-  constructor(private postSrv: PostsService) { }
-  articoli=this.postSrv.getPosts();
-  ngOnInit(): void {
-    this.getActiveComponents();
-  }
-  async getActiveComponents(){
-    console.log(this.articoli);
-  }
+  posts:Post[]=[]
+  constructor(private postSrv: PostsService) {
+
+   }
+   ngOnInit():void{
+    this.postSrv.getPostsFiltrati(true).then((arr)=>{
+      this.posts=arr
+    })
+   }
 }
+
+
