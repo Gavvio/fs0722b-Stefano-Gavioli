@@ -1,0 +1,8 @@
+<h1 class="text-center">Users</h1>
+<div class="d-flex justify-content-center flex-column mx-5">
+
+  <div [ngClass]="{}" class="btn btn-info border border-square me-2" [routerLink]="'users-details/'+user.id" *ngFor="let user of Utenti">{{user.nome}}</div>
+  <router-outlet ></router-outlet>
+</div>
+
+<!-- [user]="user" -->
