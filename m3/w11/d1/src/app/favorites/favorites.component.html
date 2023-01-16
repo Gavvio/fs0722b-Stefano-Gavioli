@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-center">
+  <div *ngIf="finito == true" class="row mx-5 mt-5 d-flex justify-content-center">
+    <p>post piaciuti:{{piaciuti}}</p>
+    <div class="col-5 border border-dark rounded mx-2 my-2" style="width: 350px;" *ngFor="let unaFoto of foto">
+      <div class="col-12" style="background-image: url('{{ unaFoto.thumbnailUrl }}'); background-repeat: no repeat; background-position: center; height: 200px;"></div>
+      <p>{{ unaFoto.title }}</p>
+      <div class="d-flex justify-content-around">
+        <div class="btn btn-danger rounded text-white me-3" (click)="elimina(unaFoto.id)">Elimina</div>
+        <div class="btn btn-info rounded text-white" (click)="miPiace()">Mi piace</div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="finito == false" class="mx-5 mt-5 d-flex">
+    <div class="dot-loader"></div>
+    <div class="dot-loader"></div>
+    <div class="dot-loader"></div>
+  </div>
+</div>
