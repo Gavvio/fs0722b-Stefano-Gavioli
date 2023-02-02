@@ -23,10 +23,34 @@ public class Dipendente {
 	public Dipendente(int matricola, double stipendio, double importoOrarioStraordinario, Livello liv,
 			Dipartimento dip) {
 		this.matricola = matricola;
-		this.stipendio = stipendio;
 		this.importoOrarioStraordinario = importoOrarioStraordinario;
 		this.liv = liv;
 		this.dip = dip;
+
+		// controllo stipendio
+		// ad ogni livello inserito controllo se la cifra è superiore allo stipendio
+		// minimo e inferiore allo stipendio massimo, in caso contrario setto al minimo
+		if (this.liv == Livello.OPERAIO) {
+			if (stipendio < 1000 || stipendio >= 1200) {
+				this.stipendio = 1000;
+			} else
+				this.stipendio = stipendio;
+		} else if (this.liv == Livello.IMPIEGATO) {
+			if (stipendio < 1200 || stipendio >= 1500) {
+				this.stipendio = 1200;
+			} else
+				this.stipendio = stipendio;
+		} else if (this.liv == Livello.QUADRO) {
+			if (stipendio < 1500 || stipendio >= 2000) {
+				this.stipendio = 1500;
+			} else
+				this.stipendio = stipendio;
+		} else {
+			if (stipendio < 2000) {
+				this.stipendio = 2000;
+			} else
+				this.stipendio = stipendio;
+		}
 	}
 
 	// metodi
