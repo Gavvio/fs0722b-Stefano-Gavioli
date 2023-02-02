@@ -63,23 +63,23 @@ public class Dipendente {
 		return importoOrarioStraordinario;
 	}
 
-	private void setImportoOrarioStraordinario(double importoOrarioStraordinario) {
+	public void setImportoOrarioStraordinario(double importoOrarioStraordinario) {
 		this.importoOrarioStraordinario = importoOrarioStraordinario;
 	}
 
-	private Dipartimento getDip() {
+	public Dipartimento getDip() {
 		return dip;
 	}
 
-	private void setDip(Dipartimento dip) {
+	public void setDip(Dipartimento dip) {
 		this.dip = dip;
 	}
 
-	private static double getStipendioBase() {
+	public static double getStipendioBase() {
 		return stipendioBase;
 	}
 
-	private int getMatricola() {
+	public int getMatricola() {
 		return matricola;
 	}
 
@@ -87,7 +87,7 @@ public class Dipendente {
 		return stipendio;
 	}
 
-	private Livello getLiv() {
+	public Livello getLiv() {
 		return liv;
 	}
 
