@@ -15,7 +15,7 @@ public class Dipendente {
 	public Dipendente(int matricola, Dipartimento dip) {
 		this.matricola = matricola;
 		this.dip = dip;
-		this.stipendio = this.stipendioBase;
+		this.stipendio = stipendioBase;
 		this.importoOrarioStraordinario = 30;
 		this.liv = Livello.OPERAIO;
 	}
